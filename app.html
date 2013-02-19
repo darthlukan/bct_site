@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+		<title>Brian C. Tomlinson</title>
+		<meta name="description" content="My personal site." />
+		<meta name="author" content="Brian Tomlinson <darthlukan@gmail.com>" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="shortcut icon" href="favicon.ico" />
+		
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.1/themes/dark-hive/jquery-ui.css" />
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
+		
+		<script type="text/javascript">
+			var browser = navigator.appName;
+			var upgrade = 'http://browserupgrade.info/';
+			var message = "You are being redirected to a page that will allow you to upgrade to a modern browser." +
+						  "Sadly, even Internet Explorer 9 does not render this site properly." +  
+						  "Clicking 'Okay' will initiate the redirect.";
+			
+			if (browser == "Microsoft Internet Explorer") {
+				alert(message);
+				window.location = upgrade;	
+			}
+		</script>
+		
+	</head>
+
+	<body>
+		
+		<header class="ui-widget-header">
+			<h1>Brian C. Tomlinson</h1>
+			<p>My own personal playground.</p>
+		</header>
+		
+		<!-- Floating menu -->
+		<div class="ui-widget" id="nav">
+			<ul class="ui-menu" id="menu">
+				<li>
+					<a id="homebtn" href="#home">Home</a>	
+				</li>
+				<li>
+					<a id="projectsbtn" href="#projects">Projects</a>
+				</li>
+				<li>
+					<a id="articlesbtn" href="#articles">Articles</a>
+				</li>
+				<li>
+					<a id="miscbtn" href="#misc">Miscellany</a>
+				</li>
+				<li>
+					<a id="contactbtn" href="#contact">Contact</a>
+				</li>
+				<li id="gplus">
+					<a><div class="g-plusone" data-annotation="bubble"></div></a>
+				</li>
+				<li id="twitter">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="DarthLukan">Tweet</a>
+				</li>
+			</ul>
+			<script type="text/javascript">
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+			</script>
+		</div>
+		<script type="text/javascript">
+			$('#menu').menu({
+				position: {
+					my: "left top", 
+					at: "right-5 top+5"
+					}
+				});
+		</script>
+		<!-- /Floating menu -->
+		
+	<div class="ui-widget" id="pages">
+		
+		<div class="ui-widget-content" id="home">
+			<header class="ui-widget-header">
+				<h2>Home</h2>
+			</header>
+			<div class="ui-widget-content" id="home-content">
+				<p>Test</p>
+				
+				<!-- Slap some content in here -->
+			</div>
+		</div>
+			
+		<div class="ui-widget-content" id="projects">
+			<header class="ui-widget-header">
+				<h2>Projects</h2>
+			</header>
+			<div class="ui-widget-content" id="projects-content">
+				<p>Projects Abstract</p>
+				<div id="projtabs">
+					<ul id="projaccord" class="ui-accordian ui-widget ui-helper-reset" role="tablist">
+            			<li id="proj1">
+                			<a href="#" class="ui-accordion-header" role="tab">Project 1</a>
+                			<div>
+                    			Project 1 Content
+                			</div>
+            			</li>
+            			<li id="proj2">
+                			<a href="#" class="ui-accordion-header" role="tab">Project 2</a>
+                			<div>
+                    			Project 2 Content
+                			</div>
+            			</li>
+			            <li id="proj3">
+			                <a href="#" class="ui-accordion-header" role="tab">Project 3</a>
+			                <div>
+			                	Project 3 Content
+			                </div>
+			            </li>
+					</ul>
+				</div>
+				<div class="g-plusone" data-annotation="inline" data-width="300"></div>
+				<script type="text/javascript">
+					var icons = {
+						header: "ui-icon-circle-arrow-e",
+						activeHeader: "ui-icon-circle-arrow-s"
+					}
+					$('#projaccord').accordion({
+						icons: icons, 
+						event: "mouseover"
+						});
+				</script>
+		</div>
+			
+		<div class="ui-widget-content" id="articles">
+			<header class="ui-widget-header">
+				<h2>Articles</h2>
+			</header>
+			<div class="ui-widget-content" id="articles-content">
+				<p>Test</p>
+			</div>
+		</div>
+			
+		<div class="ui-widget-content" id="misc">
+			<header class="ui-widget-header">
+				<h2>Miscellany</h2>
+			</header>
+			<div class="ui-widget-content" id="misc-content">
+				<p>Test</p>
+			</div>
+		</div>
+		
+		<div class="ui-widget-content" id="contact">
+			<header class="ui-widget-header">
+				<h2>Contact</h2>
+			</header>
+			<div class="ui-widget-content" id="contact-content">
+				<p>Test</p>
+			</div>
+		</div>
+		<div class="ui-widget-footer" id="foot">
+			<p>&copy; Copyright  by Brian C. Tomlinson 2013</p>
+		</div>
+	</div>
+	<!-- No content beyond this point-->
+	<script type="text/javascript" src="js/scroll.js"></script>
+	<script type="text/javascript">
+		// Google is kind enough to asynchronously load the G+ button
+  		(function() {
+   			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   			po.src = 'https://apis.google.com/js/plusone.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  		})();
+	</script>
+	</body>
+</html>

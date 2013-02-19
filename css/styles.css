@@ -1,0 +1,42 @@
+/*
+ * @author Brian Tomlinson <darthlukan@gmail.com>
+ */
+
+body {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #555555;
+}
+
+#home {
+	height: 1000px;
+}
+ 
+#projects {
+	height: 1000px;
+}
+ 
+#articles {
+	height: 1000px;
+} 
+
+#misc {
+	height: 1000px;
+} 
+
+#contact {
+	height: 1000px;
+}
+
+/* Place the menu outside of the page width 
+ * and make it follow scroll 
+ */
+#menu {
+	position: fixed;
+	margin-left: -150px;
+}
+
+#twitter {
+	padding-left: 7px;
+}
