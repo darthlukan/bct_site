@@ -6,7 +6,7 @@ body {
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
-	background: #555555;
+	background: #03314B;
 }
 
 #home {
@@ -23,16 +23,16 @@ body {
 
 #misc {
 	height: 1200px;
-} 
-
-#wrapper {
-	width: 800;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 #contact {
-	height: 400px;
+	height: 1000px;
+}
+
+#contact-content {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #p1, #p2, #p3 {

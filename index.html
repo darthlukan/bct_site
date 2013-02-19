@@ -13,9 +13,9 @@
 		<link rel="shortcut icon" href="icon.png" />
 		
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.1/themes/dot-luv/jquery-ui.css" />
 		
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.1/themes/dark-hive/jquery-ui.css" />
 		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
 		
 		<script type="text/javascript">
@@ -24,18 +24,16 @@
 			var message = "You are being redirected to a page that will allow you to upgrade to a modern browser." +
 						  "Sadly, even Internet Explorer 9 does not render this site properly." +  
 						  "Clicking 'Okay' will initiate the redirect.";
-			
+
 			if (browser == "Microsoft Internet Explorer") {
 				alert(message);
 				window.location = upgrade;	
 			}
-		</script>
-		
+		</script>		
 	</head>
 
-	<body>
-		
-		<header class="ui-widget-header">
+	<body>		
+		<header class="ui-widget-header" id="top">
 			<h1>Brian C. Tomlinson</h1>
 			<p>My own personal playground.</p>
 		</header>
@@ -80,7 +78,9 @@
 		<!-- /Floating menu -->
 		
 	<div class="ui-widget" id="pages">
-		
+		<div id="footer">
+			.
+		</div>
 		<div class="ui-widget-content" id="home">
 			<header class="ui-widget-header">
 				<h2>Home</h2>
@@ -186,15 +186,40 @@
 				</iframe>
 			</div>
 		</div>
-		
+
 		<div class="ui-widget-content" id="contact">
-			<header class="ui-widget-header">
+			<header class="ui-widget-header" id="contact-head">
 				<h2>Contact</h2>
 			</header>
 			<div class="ui-widget-content" id="contact-content">
-				<p>Email: <a title="Contact me!" href="mailto:darthlukan@gmail.com?subject=bct.com feedback">darthlukan@gmail.com</a></p>
+				<p>Email: <a title="Contact me!" href="mailto:darthlukan@gmail.com">darthlukan@gmail.com</a></p>
 				
 				More methods of contact coming soon.
+				
+				<form id="contact-form" name="contact-form" method="post" action="contact.php">
+					<p>
+						<label for="name">Name: </label><br/>
+						<input name="name" id="name" type="text" required/>
+					</p>
+					<p>
+						<label for="email">Email: </label><br/>
+						<input name="email" id="email" type="text" required/>
+					</p>
+					<p>
+						<label for="subject">Subject: </label><br/>
+						<input name="subject" id="subject" type="text" required/>
+					</p>
+					<p>
+						<label for="msg">Message:</label><br/>
+						<textarea name="msg" id="msg" cols="23" rows="5" required> </textarea>
+					</p>
+					<p>
+						<button id="submit">Submit</button>
+					</p>
+				</form>
+				<script type="text/javascript">
+					$("#submit").button();
+				</script>
 			</div>
 		</div>
 		<div class="ui-widget-footer" id="footer">
@@ -213,6 +238,18 @@
 	</script>
 	<script type="text/javascript">
 		$(document).tooltip();
+		
+		// Contact form:
+		$('#submit').click(function() {
+			$.ajax({
+				type: 'POST',
+				url: "contact.php",
+				data: $('#contact-form').serialize(), //Thanks Tim Withers! http://stackoverflow.com/a/12136157/1016320
+				success: function (response) {
+					alert("Success!", "Email sent, thank you for your feedback!");
+				}
+			});
+		});
 	</script>
 	</body>
 </html>
