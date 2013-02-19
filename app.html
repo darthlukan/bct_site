@@ -10,7 +10,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="shortcut icon" href="icon.png" />
 		
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		
@@ -86,8 +86,9 @@
 				<h2>Home</h2>
 			</header>
 			<div class="ui-widget-content" id="home-content">
-				<p>Test</p>
-				
+				<iframe src="https://docs.google.com/document/d/1jupIkgFTSJ_zh2UEFMx7MRdr9syI1VNb-D8DEf9BJek/pub?embedded=true" 
+					width="800" height="800" frameborder="0" marginheight="auto" marginwidth="auto" style="padding-left: 50px">
+				</iframe>
 				<!-- Slap some content in here -->
 			</div>
 		</div>
@@ -97,30 +98,50 @@
 				<h2>Projects</h2>
 			</header>
 			<div class="ui-widget-content" id="projects-content">
-				<p>Projects Abstract</p>
+				<p>This is a small sampling of personal projects that I'm working on.
+					Each project has its own description as well as links.  Images will come later.</p>
 				<div id="projtabs">
 					<ul id="projaccord" class="ui-accordian ui-widget ui-helper-reset" role="tablist">
             			<li id="proj1">
-                			<a href="#" class="ui-accordion-header" role="tab">Project 1</a>
-                			<div>
-                    			Project 1 Content
-                			</div>
+                			<a href="#" class="ui-accordion-header" role="tab">Peppermint OS</a>
+			                <div id="p1">
+			               		<img src="img/ICE_small.jpg" />
+			               		
+			                	<p>Everybody that knows me also knows how deep a love of Linux I have.
+			                		<a title="Peppermint OS homepage" href="http://peppermintos.com/">Peppermint OS</a> is an Ubuntu based distribution that aims
+			                		to bring the web to the desktop, simply.</p>
+			                		
+			                	<p>My role with this project is small, I'm working on an update, as well as a rewrite
+			                		of <a title="A little more about Ice" href="http://peppermintos.com/about-peppermint/">Ice</a>, a site specific browser.</p>
+			                </div>
             			</li>
             			<li id="proj2">
-                			<a href="#" class="ui-accordion-header" role="tab">Project 2</a>
-                			<div>
-                    			Project 2 Content
+                			<a href="#" class="ui-accordion-header" role="tab">The Art Of War Quotes</a>
+                			<div id="p2">
+                				<img src="img/yinyang.jpg" />
+                				
+                    			<p>This is a really fun little project that ended up becoming a
+                    				<a title="Get Art Of War Quotes for Chrome!" href="http://goo.gl/dB9ZJ">Google Chrome Extension!</a>
+                    				There's also a web app version that is available for use
+                    				inside your browser <a title="Art Of War Quotes Web" href="http://brianctomlinson.com/pages/aow/">here.</a></p>
+                    				
+                    			<p>If you'd like to check out the code, here's the <a title="Art Of War Quotes on GitHub" href="http://goo.gl/Ez9ox">Chrome Extension code</a>, and here's
+                    				the <a title="Art Of War Quotes Web on GitHub" href="http://goo.gl/ejlPD">code for the browser version.</a></p>
                 			</div>
             			</li>
 			            <li id="proj3">
-			                <a href="#" class="ui-accordion-header" role="tab">Project 3</a>
-			                <div>
-			                	Project 3 Content
-			                </div>
+			                <a href="#" class="ui-accordion-header" role="tab">This Site!</a>
+                			<div id="p3">
+                				<p>That's right, this entire site is a project in and of
+                					itself.  I'm writing the whole thing by hand (save for a few
+                					features/plugins) in order to provide a more personal touch.</p>
+                					
+                				<p>If you want to follow the progress of this site's code and markup, feel
+                					free to head on over to <a title="The code behind this site on GitHub" href="http://goo.gl/9yEhQ">GitHub</a> and check out the project.</p>
+                			</div>
 			            </li>
 					</ul>
 				</div>
-				<div class="g-plusone" data-annotation="inline" data-width="300"></div>
 				<script type="text/javascript">
 					var icons = {
 						header: "ui-icon-circle-arrow-e",
@@ -128,8 +149,11 @@
 					}
 					$('#projaccord').accordion({
 						icons: icons, 
-						event: "mouseover"
+						event: "mouseover",
+						heightStyle: "fill"
 						});
+						
+					$('#projaccord').accordion("refresh");
 				</script>
 		</div>
 			
@@ -138,7 +162,7 @@
 				<h2>Articles</h2>
 			</header>
 			<div class="ui-widget-content" id="articles-content">
-				<p>Test</p>
+				<p>Coming Soon!</p>
 			</div>
 		</div>
 			
@@ -147,7 +171,19 @@
 				<h2>Miscellany</h2>
 			</header>
 			<div class="ui-widget-content" id="misc-content">
-				<p>Test</p>
+				<p>Here are some of my favorite YouTube videos:</p>
+
+				<iframe width="560" height="315" 
+					src="http://www.youtube.com/embed/oOlDewpCfZQ?list=FLtyWwkPkeBg8Onl4xs29WHA" frameborder="0" allowfullscreen>
+				</iframe>
+				
+				<iframe width="560" height="315" 
+					src="http://www.youtube.com/embed/6dW6aNAZGTM?list=FLtyWwkPkeBg8Onl4xs29WHA" frameborder="0" allowfullscreen>
+				</iframe>
+				
+				<iframe width="560" height="315" 
+					src="http://www.youtube.com/embed/YXh9RQCvxmg?list=FLtyWwkPkeBg8Onl4xs29WHA" frameborder="0" allowfullscreen>
+				</iframe>
 			</div>
 		</div>
 		
@@ -156,11 +192,13 @@
 				<h2>Contact</h2>
 			</header>
 			<div class="ui-widget-content" id="contact-content">
-				<p>Test</p>
+				<p>Email: <a title="Contact me!" href="mailto:darthlukan@gmail.com?subject=bct.com feedback">darthlukan@gmail.com</a></p>
+				
+				More methods of contact coming soon.
 			</div>
 		</div>
-		<div class="ui-widget-footer" id="foot">
-			<p>&copy; Copyright  by Brian C. Tomlinson 2013</p>
+		<div class="ui-widget-footer" id="footer">
+			<p>&copy; Copyright Brian C. Tomlinson 2013</p>
 		</div>
 	</div>
 	<!-- No content beyond this point-->
@@ -172,6 +210,9 @@
    			po.src = 'https://apis.google.com/js/plusone.js';
     		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   		})();
+	</script>
+	<script type="text/javascript">
+		$(document).tooltip();
 	</script>
 	</body>
 </html>
