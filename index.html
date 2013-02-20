@@ -192,18 +192,16 @@
 				<h2>Contact</h2>
 			</header>
 			<div class="ui-widget-content" id="contact-content">
-				<p>Email: <a title="Contact me!" href="mailto:darthlukan@gmail.com">darthlukan@gmail.com</a></p>
+				<h3>Email Form:</h3>
 				
-				More methods of contact coming soon.
-				
-				<form id="contact-form" name="contact-form" method="post" action="contact.php">
+				<form id="contact-form">
 					<p>
 						<label for="name">Name: </label><br/>
 						<input name="name" id="name" type="text" required/>
 					</p>
 					<p>
 						<label for="email">Email: </label><br/>
-						<input name="email" id="email" type="text" required/>
+						<input name="email" id="email" type="email" required/>
 					</p>
 					<p>
 						<label for="subject">Subject: </label><br/>
@@ -214,19 +212,18 @@
 						<textarea name="msg" id="msg" cols="23" rows="5" required> </textarea>
 					</p>
 					<p>
-						<button id="submit">Submit</button>
+						<button type="submit" id="send">Submit</button>
 					</p>
 				</form>
-				<script type="text/javascript">
-					$("#submit").button();
-				</script>
 			</div>
 		</div>
 		<div class="ui-widget-footer" id="footer">
 			<p>&copy; Copyright Brian C. Tomlinson 2013</p>
 		</div>
 	</div>
+	
 	<!-- No content beyond this point-->
+	
 	<script type="text/javascript" src="js/scroll.js"></script>
 	<script type="text/javascript">
 		// Google is kind enough to asynchronously load the G+ button
@@ -237,19 +234,29 @@
   		})();
 	</script>
 	<script type="text/javascript">
-		$(document).tooltip();
+	$(document).tooltip();
 		
+	$("#send").button();
+
+	$(document).ready(function() {
 		// Contact form:
-		$('#submit').click(function() {
+		$('#contact-form').submit(function() {
 			$.ajax({
-				type: 'POST',
-				url: "contact.php",
-				data: $('#contact-form').serialize(), //Thanks Tim Withers! http://stackoverflow.com/a/12136157/1016320
-				success: function (response) {
-					alert("Success!", "Email sent, thank you for your feedback!");
+				type : 'POST',
+				url : "contact.php",
+				data : $('#contact-form').serialize(), //Thanks Tim Withers! http://stackoverflow.com/a/12136157/1016320
+				success : function() {
+					alert("Email Sent! Thank you for your feedback.");
+					$('#contact-form').each(function() {
+						this.reset();
+					});
 				}
 			});
+			// If we don't return false, we'll use the 
+			// old HTML way which is exactly what we don't want.
+			return false;
 		});
+	});
 	</script>
 	</body>
 </html>
