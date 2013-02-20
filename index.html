@@ -7,6 +7,7 @@
 		<title>Brian C. Tomlinson</title>
 		<meta name="description" content="My personal site." />
 		<meta name="author" content="Brian Tomlinson <darthlukan@gmail.com>" />
+		<meta itemprop="image" content="http://brianctomlinson.com/icon.png">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -44,7 +45,7 @@
 		<div class="ui-widget" id="nav">
 			<ul class="ui-menu" id="menu">
 				<li>
-					<a id="homebtn" href="#home">Home</a>	
+					<a id="homebtn" href="#top">Home</a>	
 				</li>
 				<li>
 					<a id="projectsbtn" href="#projects">Projects</a>
@@ -81,20 +82,28 @@
 		
 	<div class="ui-widget" id="pages">
 		<div id="footer">
-			.
+			<div id="badge">
+				<div class="g-plus" data-width="450" data-height="69" data-href="//plus.google.com/109039118030883131674" data-rel="author" data-theme="dark"> </div>
+		    </div>
 		</div>
+		<script type="text/javascript">
+			// Google is kind enough to asynchronously load the G+ button
+		  	(function() {
+		   		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		   		po.src = 'https://apis.google.com/js/plusone.js';
+		    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  	})();
+		</script>
 		<div class="ui-widget-content" id="home">
 			<header class="ui-widget-header">
 				<h2>Home</h2>
 			</header>
 			<div class="ui-widget-content" id="home-content">
 				<iframe src="https://docs.google.com/document/d/1jupIkgFTSJ_zh2UEFMx7MRdr9syI1VNb-D8DEf9BJek/pub?embedded=true" 
-					width="800" height="800" frameborder="0" marginheight="auto" marginwidth="auto" style="padding-left: 50px">
+					width="800" height="800" frameborder="0" marginheight="auto" marginwidth="auto" >
 				</iframe>
-				<!-- Slap some content in here -->
 			</div>
 		</div>
-			
 		<div class="ui-widget-content" id="projects">
 			<header class="ui-widget-header">
 				<h2>Projects</h2>
@@ -158,7 +167,6 @@
 					$('#projaccord').accordion("refresh");
 				</script>
 		</div>
-			
 		<div class="ui-widget-content" id="articles">
 			<header class="ui-widget-header">
 				<h2>Articles</h2>
@@ -167,14 +175,13 @@
 				<p>Coming Soon!</p>
 			</div>
 		</div>
-			
 		<div class="ui-widget-content" id="misc">
 			<header class="ui-widget-header">
 				<h2>Miscellany</h2>
 			</header>
 			<div class="ui-widget-content" id="misc-content">
-				<p>Here are some of my favorite YouTube videos:</p>
-
+				<h3>Some of my favorite YouTube videos:</h3>
+				<br/>
 				<iframe width="560" height="315" 
 					src="http://www.youtube.com/embed/oOlDewpCfZQ?list=FLtyWwkPkeBg8Onl4xs29WHA" frameborder="0" allowfullscreen>
 				</iframe>
@@ -188,7 +195,6 @@
 				</iframe>
 			</div>
 		</div>
-
 		<div class="ui-widget-content" id="contact">
 			<header class="ui-widget-header" id="contact-head">
 				<h2>Contact</h2>
@@ -227,43 +233,36 @@
 	<!-- No content beyond this point-->
 	
 	<script type="text/javascript" src="js/scroll.js"></script>
+	
 	<script type="text/javascript">
-		// Google is kind enough to asynchronously load the G+ button
-  		(function() {
-   			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-   			po.src = 'https://apis.google.com/js/plusone.js';
-    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  		})();
-	</script>
-	<script type="text/javascript">
-	$(document).tooltip();
-		
-	$("#send").button();
-
-	$(document).ready(function() {
-		// Contact form:
-		$('#contact-form').validate({
-			submitHandler: function(form) {
-				$('#contact-form').submit(function() {
+		$(document).tooltip();
 			
-					$.ajax({
-						type : 'POST',
-						url : "contact.php",
-						data : $('#contact-form').serialize(), //Thanks Tim Withers! http://stackoverflow.com/a/12136157/1016320
-						success : function() {
-							alert("Email Sent! Thank you for your feedback.");
-							$('#contact-form').each(function() {
-								this.reset();
-							});
-						}
+		$("#send").button();
+	
+		$(document).ready(function() {
+			// Contact form:
+			$('#contact-form').validate({
+				submitHandler: function(form) {
+					$('#contact-form').submit(function() {
+				
+						$.ajax({
+							type : 'POST',
+							url : "contact.php",
+							data : $('#contact-form').serialize(), //Thanks Tim Withers! http://stackoverflow.com/a/12136157/1016320
+							success : function() {
+								alert("Email Sent! Thank you for your feedback.");
+								$('#contact-form').each(function() {
+									this.reset();
+								});
+							}
+						});
+						// If we don't return false, we'll use the 
+						// old HTML way which is exactly what we don't want.
+						return false;
 					});
-					// If we don't return false, we'll use the 
-					// old HTML way which is exactly what we don't want.
-					return false;
-				});
-			}
+				}
+			});
 		});
-	});
 	</script>
 	</body>
 </html>
