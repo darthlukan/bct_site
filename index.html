@@ -18,6 +18,8 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
 		
+		<script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+		
 		<script type="text/javascript">
 			var browser = navigator.appName;
 			var upgrade = 'http://browserupgrade.info/';
@@ -240,21 +242,26 @@
 
 	$(document).ready(function() {
 		// Contact form:
-		$('#contact-form').submit(function() {
-			$.ajax({
-				type : 'POST',
-				url : "contact.php",
-				data : $('#contact-form').serialize(), //Thanks Tim Withers! http://stackoverflow.com/a/12136157/1016320
-				success : function() {
-					alert("Email Sent! Thank you for your feedback.");
-					$('#contact-form').each(function() {
-						this.reset();
+		$('#contact-form').validate({
+			submitHandler: function(form) {
+				$('#contact-form').submit(function() {
+			
+					$.ajax({
+						type : 'POST',
+						url : "contact.php",
+						data : $('#contact-form').serialize(), //Thanks Tim Withers! http://stackoverflow.com/a/12136157/1016320
+						success : function() {
+							alert("Email Sent! Thank you for your feedback.");
+							$('#contact-form').each(function() {
+								this.reset();
+							});
+						}
 					});
-				}
-			});
-			// If we don't return false, we'll use the 
-			// old HTML way which is exactly what we don't want.
-			return false;
+					// If we don't return false, we'll use the 
+					// old HTML way which is exactly what we don't want.
+					return false;
+				});
+			}
 		});
 	});
 	</script>
