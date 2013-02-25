@@ -21,4 +21,5 @@ $contactMessage =
 
 mail('darthlukan@gmail.com', $subject, $contactMessage);
 // Send the user back to the page
-header('Location: http://brianctomlinson.com/#contact');
+//header('Location: http://brianctomlinson.com/#contact');
+?>

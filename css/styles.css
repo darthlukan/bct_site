@@ -22,9 +22,17 @@ body {
 	height: 500px;
 }
 
+#social {
+	height: 1100px;
+}
+
+#twitter-widget-1 {
+    padding-left: 165px;
+}
+
 #articles {
-	height: 1000px;
-} 
+    #height: 1000px;
+}
 
 #misc {
 	height: 1200px;
@@ -57,7 +65,7 @@ body {
  */
 #menu {
 	position: fixed;
-	margin-left: -140px;
+	margin-left: -160px;
 }
 
 #twitter {
@@ -73,9 +81,9 @@ body {
 }
 
 #badge {
-	width: 450;
+	width: 300px;
 	margin-right: 0px;
-	padding-left: 365px;
+	padding-left: 520px;
 	padding-top: 20px;
 }
 
