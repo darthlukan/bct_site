@@ -10,11 +10,11 @@ body {
 }
 
 #home {
-	height: 900px;
+	height: 1000px;
 }
 
 #home-content {
-    width: 750px;
+    width: 750px !important;
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
