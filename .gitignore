@@ -1,0 +1,11 @@
+#Project files#
+###############
+.idea
+.idea/*
+.project
+
+#Other#
+#######
+.DS_Store
+packages
+pubsec.lock
