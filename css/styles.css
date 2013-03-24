@@ -11,6 +11,7 @@ body {
 
 .ui-widget-content {
     background: #000000 !important;
+    font-size: 90%;
 }
 
 #home {
@@ -25,12 +26,12 @@ body {
 }
  
 #projects {
-	height: 1000px;
+	height: 400px;
 }
 
 /*Project accordion tabs*/
 #p1, #p2, #p3 {
-	height: 500px;
+	height: 350px;
 }
 
 #social {
