@@ -43,7 +43,7 @@ body {
 }
 
 #articles {
-    #height: 1000px;
+    height: 1000px;
 }
 
 #misc {
@@ -97,6 +97,12 @@ body {
 	margin-right: 0px;
 	padding-left: 520px;
 	padding-top: 20px;
+}
+
+#intj {
+    width: 300px !important;
+    height: 30px !important;
+    margin-left: -20px !important;
 }
 
 img {
