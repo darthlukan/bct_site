@@ -1,1 +1,15 @@
+<<<<<<< HEAD
 js/tumbler.js
+=======
+#Project files#
+###############
+.idea
+.idea/*
+.project
+
+#Other#
+#######
+.DS_Store
+packages
+pubsec.lock
+>>>>>>> 9cde5dd6a9bf61ca68ec3ea8d7ecbc0dc038bde8
