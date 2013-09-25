@@ -32,7 +32,7 @@ if ('development' == app.get('env')) {
 // Home
 app.get('/', routes.index);
 
-// Mobile
+// Mobile (For Firefox OS app market)
 app.get('/mobile', routes.mobile);
 
 // Engage
