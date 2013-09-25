@@ -11,7 +11,7 @@ var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
-app.set('ipaddr', process.env.IP || "127.0.0.1");
+app.set('ipaddr', process.env.IP || "0.0.0.0");
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon());
