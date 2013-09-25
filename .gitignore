@@ -12,3 +12,4 @@ js/tumbler.js
 packages
 pubsec.lock
 bak.*
+*.htaccess
