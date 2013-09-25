@@ -22,13 +22,18 @@ app.use(express.cookieParser('your secret here'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'mobile')));
 
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// Home
 app.get('/', routes.index);
+
+// Mobile
+app.get('/mobile', routes.mobile);
 
 // Engage
 http.createServer(app).listen(app.get('port'), app.get('ipaddr'), function(){
