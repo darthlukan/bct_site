@@ -1,15 +1,22 @@
-js/tumbler.js
-=======
-#Project files#
-###############
+# Project files #
+#################
 .idea
 .idea/*
 .project
 
-#Other#
-#######
+# Other #
+#########
 .DS_Store
 packages
 pubsec.lock
 bak.*
 *.htaccess
+js/tumbler.js
+
+# Personal dirs #
+#################
+*conky*
+valentine
+toys
+UNIX*
+Lisp*

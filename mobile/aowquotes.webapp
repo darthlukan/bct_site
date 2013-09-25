@@ -1,0 +1,15 @@
+{
+  "name": "Art Of War Quotes Mobile",
+  "description": "Displays random quotes from the book, 'The Art Of War', by Sun Tzu.",
+  "launch_path": "/",
+  "icons": {
+    "24": "/icon.png",
+    "128": "/icon.png"
+  },
+  "developer": {
+    "name": "Brian Tomlinson",
+    "url": "http://brianctomlinson.com"
+  },
+  "default_locale": "en",
+  "type": "web"
+}
