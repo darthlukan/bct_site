@@ -11,7 +11,7 @@ packages
 pubsec.lock
 bak.*
 *.htaccess
-js/tumbler.js
+public/js/tumblr.js
 
 # Personal dirs #
 #################
