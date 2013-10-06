@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 
     <title>Brian C. Tomlinson</title>
+
     <meta itemprop="name" content="Brian C. Tomlinson">
     <meta itemprop="description" content="My personal playground.  A place where I share thoughts, ideas, projects, and other fun things that I'm working on.">
-    <meta itemprop="image" content="http://brianctomlinson.com/img/icon.png">
+    <meta itemprop="image" content="http://www.brianctomlinson.com/img/icon.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -16,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.2/themes/dot-luv/jquery-ui.css" />
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
 
     <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
@@ -27,7 +28,7 @@
         var browser = navigator.appName;
         var upgrade = 'http://www.google.com/chrome'
         var message = "You are being redirected to a page that will allow you to upgrade to a modern browser." +
-                "Sadly, even Internet Explorer 9 does not render this site properly." +
+                "Sadly, even Internet Explorer 9+ does not render this site properly." +
                 "Clicking 'Okay' will initiate the redirect.";
 
         if (browser == "Microsoft Internet Explorer") {
@@ -45,9 +46,12 @@
         _gaq.push(['_trackPageview']);
 
         (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
         })();
     </script>
 </head>
@@ -84,7 +88,13 @@
         </li>
     </ul>
     <script type="text/javascript">
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        !function(d,s,id){
+            var js,fjs=d.getElementsByTagName(s)[0];
+            if(!d.getElementById(id)){js=d.createElement(s);
+                js.id=id;
+                js.src="//platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js,fjs);
+            }}(document,"script","twitter-wjs");
     </script>
 </div>
 <script type="text/javascript">
@@ -108,10 +118,13 @@
     </div>
     <script type="text/javascript">
         // Google is kind enough to asynchronously load the G+ button
-        (function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        (function () {
+            var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
             po.src = 'https://apis.google.com/js/plusone.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(po, s);
         })();
     </script>
     <div class="ui-widget-content" id="home">
