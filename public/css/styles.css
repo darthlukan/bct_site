@@ -39,6 +39,11 @@ body {
     text-align: center;
 }
 
+#github {
+    height: 800px;
+    text-align: center;
+}
+
 #twitter-widget-1 {
     padding-left: 165px;
 }
