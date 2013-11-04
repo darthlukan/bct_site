@@ -41,6 +41,12 @@ body {
     margin-right: auto;
 }
 
+#social-content {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #github {
     width: 850px;
     height: 750px;
