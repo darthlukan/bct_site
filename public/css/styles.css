@@ -40,11 +40,10 @@ body {
 }
 
 #github {
-    width: 850px !important;
+    width: 850px;
     height: 750px;
     margin-left: auto;
     margin-right: auto;
-    text-align: justify;
 }
 
 #twitter-widget-1 {
