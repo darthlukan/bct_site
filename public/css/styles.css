@@ -160,3 +160,7 @@ body {
     font-size: 11px;
     color: #AAAAAA;
 }
+
+.itemContent img {
+    padding: 1%;
+}
