@@ -23,6 +23,7 @@
     <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
     <script type="text/javascript" src="js/jquery.tumblrFeed.min.js"></script>
     <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="js/FeedEk.js"></script>
 
     <script type="text/javascript">
         var browser = navigator.appName;
@@ -246,10 +247,20 @@
                 <h1>My GitHub Activity</h1>
             </header>
             <div class="ui-widget-content" id="github-content">
-                <p>
-                    <!-- Activity feed here -->
-                </p>
+
             </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#github-content').FeedEk({
+                        FeedUrl: 'https://github.com/darthlukan.atom',
+                        MaxCount: 10,
+                        ShowDesc: true,
+                        ShowPubDate: true,
+                        CharacterLimit: 100,
+                        TitleLinkTarget: '_blank'
+                    });
+                });
+            </script>
         </div>
         <div class="ui-widget-content" id="social">
             <header class="ui-widget-header">
