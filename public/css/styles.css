@@ -25,8 +25,18 @@ body {
     text-align: justify;
 }
 
+#home-content img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #projects {
     height: 400px;
+}
+
+#projects img {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Project accordion tabs*/
