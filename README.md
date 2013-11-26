@@ -13,3 +13,7 @@ mean text that gets displayed in the browser.
 That stuff is mine.  Feel free to remove
 my text and replace it with your own, I don't
 mind. :)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/darthlukan/bct_site/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
